@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>個人履歷 - 亞洲大學學生</title>
+
+<style>
+body{
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    margin:0;
+    background:#f4f6f8;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+}
+
+.header{
+    text-align:center;
+    border-bottom:3px solid #2c3e50;
+    padding-bottom:20px;
+}
+
+.header h1{
+    margin:0;
+    color:#2c3e50;
+}
+
+.header p{
+    margin:5px;
+    color:#555;
+}
+
+.section{
+    margin-top:30px;
+}
+
+.section h2{
+    border-left:6px solid #3498db;
+    padding-left:10px;
+    color:#2c3e50;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    row-gap:8px;
+}
+
+.skills span{
+    display:inline-block;
+    background:#3498db;
+    color:white;
+    padding:6px 10px;
+    margin:4px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.project{
+    margin-bottom:15px;
+}
+
+button{
+    margin-top:30px;
+    padding:10px 18px;
+    border:none;
+    background:#2c3e50;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a252f;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:#888;
+    font-size:14px;
+}
+
+@media print{
+    button{
+        display:none;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1 id="name">温凡儀</h1>
+<p>亞洲大學學生 | 學號: 114022004</p>
+<p>Email: fwen019@gmail.com | Phone: 0912-345-678</p>
+</div>
+
+<div class="section">
+<h2>基本資料</h2>
+<div class="info-grid">
+<div>學校</div><div>亞洲大學</div>
+<div>系所</div><div>資訊相關科系</div>
+<div>年級</div><div>大學生</div>
+<div>所在地</div><div>台灣</div>
+</div>
+</div>
+
+<div class="section">
+<h2>自我介紹</h2>
+<p>
+我是亞洲大學的學生，對資訊科技與軟體開發具有高度興趣。
+目前持續學習 Web 開發、程式設計與人工智慧相關技術，
+希望能在未來成為一位具備實務能力的軟體工程師。
+</p>
+</div>
+
+<div class="section">
+<h2>技能</h2>
+<div class="skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>Git</span>
+<span>Web Development</span>
+</div>
+</div>
+
+<div class="section">
+<h2>專案經驗</h2>
+
+<div class="project">
+<strong>個人網站</strong>
+<p>使用 HTML、CSS、JavaScript 建立個人作品展示網站。</p>
+</div>
+
+<div class="project">
+<strong>簡易待辦事項 App</strong>
+<p>使用 JavaScript 製作待辦事項管理系統，包含新增、刪除與儲存功能。</p>
+</div>
+
+</div>
+
+<div class="section">
+<h2>教育背景</h2>
+<p>
+亞洲大學 (Asia University)  
+<br>
+資訊相關領域學習中
+</p>
+</div>
+
+<div class="section">
+<h2>語言能力</h2>
+<ul>
+<li>中文：母語</li>
+<li>英文：基本閱讀與技術文件理解</li>
+</ul>
+</div>
+
+<button onclick="printResume()">下載 / 列印履歷 (PDF)</button>
+
+<footer>
+AI Generated Resume | 2026
+</footer>
+
+</div>
+
+<script>
+function printResume(){
+    window.print();
+}
+
+const names = [
+"學生姓名",
+"Your Name",
+"Asia University Student"
+];
+
+let index = 0;
+
+setInterval(()=>{
+    index = (index + 1) % names.length;
+    document.getElementById("name").innerText = names[index];
+},4000);
+</script>
+
+</body>
+</html>
