@@ -11,45 +11,43 @@ body{
     background:#f3f4f6;
 }
 
-/* 上方封面 */
+/* 黑色上方橫幅 */
 .banner{
     width:100%;
-    height:200px;
-    background:url("images/banner.jpg") center/cover no-repeat;
+    height:180px;
+    background:#111;
+    position:relative;
 }
 
-/* 頭像 */
+/* 頭像（浮起來效果） */
 .avatar{
     width:120px;
     height:120px;
     border-radius:50%;
     border:5px solid white;
-    position:absolute;
-    top:140px;
-    left:50%;
-    transform:translateX(-50%);
     object-fit:cover;
+    position:absolute;
+    bottom:-60px; /* 關鍵：往下壓一半 */
+    left:50px;
 }
 
-/* 卡片 */
+/* 個人卡片 */
 .card{
-    max-width:800px;
+    max-width:900px;
     margin:80px auto 20px;
     background:white;
     border-radius:10px;
-    padding:30px;
+    padding:20px 20px 20px 180px; /* 左邊留給頭像空間 */
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    text-align:center;
 }
 
 .name{
-    font-size:26px;
-    margin-top:60px;
+    font-size:24px;
 }
 
 .title{
     color:#666;
-    margin:5px 0 15px;
+    margin:5px 0;
 }
 
 .info{
@@ -59,7 +57,7 @@ body{
 
 /* 區塊 */
 .section{
-    max-width:800px;
+    max-width:900px;
     margin:15px auto;
     background:white;
     border-radius:10px;
@@ -74,7 +72,6 @@ body{
     margin-bottom:10px;
 }
 
-/* 列表 */
 .item{
     margin-bottom:15px;
 }
@@ -93,13 +90,12 @@ body{
 
 <body>
 
-<!-- 封面 -->
-<div class="banner"></div>
+<!-- 黑色橫幅 + 頭像 -->
+<div class="banner">
+    <img src="images/S__1245187.jpg" class="avatar">
+</div>
 
-<!-- 頭像 -->
-<img src="images/S__1245187.jpg" class="avatar">
-
-<!-- 個人卡 -->
+<!-- 個人卡片 -->
 <div class="card">
     <div class="name">温凡儀</div>
     <div class="title">亞洲大學學生</div>
